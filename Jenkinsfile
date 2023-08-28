@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Testing') {
             steps{
-                echo 'Unit tests successful. no issues'
+                echo 'Unit tests successful. no issues.'
                 echo 'Integration tests successful. no issues.'
             }
             post{
