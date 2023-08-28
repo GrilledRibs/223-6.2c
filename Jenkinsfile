@@ -17,6 +17,13 @@ pipeline{
                 echo 'Unit tests successful. no issues'
                 echo 'Integration tests successful. no issues.'
             }
+            post{
+                success{
+                    mail to:'rvajero@gmail.com',
+                    subject:'Unit and integration test status',
+                    body:'test successful'
+                }
+            }
         }
         stage('Code') {
             steps{
@@ -27,6 +34,13 @@ pipeline{
             steps{
                 echo 'Security scan complete. no issues.'
             }
+            post{
+                success{
+                    mail to:'rvajero@gmail.com',
+                    subject:'Security test status',
+                    body:'test successful'
+                }
+            }
         }
         stage('Deploy') {
             steps{
@@ -36,6 +50,13 @@ pipeline{
         stage('Integration test') {
             steps{
                 echo 'Integration test complete.'
+            }
+            post{
+                success{
+                    mail to:'rvajero@gmail.com',
+                    subject:'Integration test status',
+                    body:'test successful'
+                }
             }
         }
         stage('Deploy to Production') {
