@@ -19,7 +19,7 @@ pipeline{
             }
             post{
                 success{
-                    mail to:'rvajero@gmail.com',
+                    emailext to:'rvajero@gmail.com',
                     subject:'Unit and integration test status',
                     body:'test successful!!!',
                     attachLog: true
