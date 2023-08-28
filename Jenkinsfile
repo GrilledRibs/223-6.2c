@@ -63,6 +63,13 @@ pipeline{
             steps{
                 echo "Deploying code to ${PRODUCTION_ENVIRONMENT}"
             }
+            post{
+                success{
+                    mail to:'rvajero@gmail.com',
+                    subject:'Deployment status',
+                    body:'Deployment successful'
+                }
+            }
         }
     }
 }
