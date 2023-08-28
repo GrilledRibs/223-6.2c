@@ -21,7 +21,8 @@ pipeline{
                 success{
                     mail to:'rvajero@gmail.com',
                     subject:'Unit and integration test status',
-                    body:'test successful!!!'
+                    body:'test successful!!!',
+                    attachLog: true
                 }
             }
         }
