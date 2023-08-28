@@ -38,7 +38,7 @@ pipeline{
                 success{
                     mail to:'rvajero@gmail.com',
                     subject:'Security test status',
-                    body:'test successful'
+                    body:'test successful!!!'
                 }
             }
         }
