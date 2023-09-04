@@ -19,7 +19,7 @@ pipeline{
             }
             post{
                 success{
-                    emailext attachLog: true, attachmentsPattern: 'generatedFile.txt',
+                    emailext
                     subject:'Unit and integration test status',                    
                     body:'test successful!!!',
                     to:'rvajero@gmail.com'
