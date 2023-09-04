@@ -19,8 +19,6 @@ pipeline{
             }
             post{
                 success{
-                    sh 'echo "artifact file" > generatedFile.txt'
-                    archiveArtifacts artifacts: 'generatedFile.txt'
                     emailext attachLog: true, attachmentsPattern: 'generatedFile.txt',
                     subject:'Unit and integration test status',                    
                     body:'test successful!!!',
