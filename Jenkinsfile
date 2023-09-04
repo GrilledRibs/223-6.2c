@@ -19,7 +19,7 @@ pipeline{
             }
             post{
                 success{
-                    archiveArtifacts artifacts: 'generatedFile.txt',
+                    archiveArtifacts artifacts: 'generatedFile.txt'
                     emailext attachLog: true, attachmentsPattern: 'generatedFile.txt',
                     subject:'Unit and integration test status',                    
                     body:'test successful!!!',
