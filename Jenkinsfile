@@ -21,7 +21,7 @@ pipeline{
                 success{
                     emailext subject:'Unit and integration test status',                    
                     body:'test successful!!!',
-                    to: $DEFAULT_RECIPIENTS
+                    to: '$DEFAULT_RECIPIENTS'
                 }
             }
         }
