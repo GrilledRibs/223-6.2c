@@ -19,7 +19,8 @@ pipeline{
             }
             post{
                 success{
-                    emailext subject:'Unit and integration test status',                    
+                    emailext attachLog: true, 
+                    subject:'Unit and integration test status',                    
                     body:'test successful!!!',
                     to: '$DEFAULT_RECIPIENTS'
                 }
