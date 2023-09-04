@@ -57,7 +57,7 @@ pipeline{
                 success{
                     emailext attachLog: true, 
                     subject:'Integration test status',
-                    body:'test successful',
+                    body:'test successful!!!',
                     to: '$DEFAULT_RECIPIENTS'
                 }
             }
