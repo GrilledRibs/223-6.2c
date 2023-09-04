@@ -37,9 +37,10 @@ pipeline{
             }
             post{
                 success{
-                    mail to:'rvajero@gmail.com',
+                    emailext attachLog: true,  
                     subject:'Security test status',
-                    body:'test successful!!!'
+                    body:'test successful!!!',
+                    to: '$DEFAULT_RECIPIENTS'
                 }
             }
         }
@@ -54,9 +55,10 @@ pipeline{
             }
             post{
                 success{
-                    mail to:'rvajero@gmail.com',
+                    emailext attachLog: true, 
                     subject:'Integration test status',
-                    body:'test successful'
+                    body:'test successful',
+                    to: '$DEFAULT_RECIPIENTS'
                 }
             }
         }
@@ -66,9 +68,10 @@ pipeline{
             }
             post{
                 success{
-                    mail to:'rvajero@gmail.com',
+                    emailext attachLog: true, 
                     subject:'Deployment status',
-                    body:'Deployment successful'
+                    body:'Deployment successful',
+                    to: '$DEFAULT_RECIPIENTS'
                 }
             }
         }
