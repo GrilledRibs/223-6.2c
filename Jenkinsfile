@@ -20,8 +20,7 @@ pipeline{
             post{
                 success{
                     emailext subject:'Unit and integration test status',                    
-                    body:'test successful!!!',
-                    to:'rvajero@gmail.com'
+                    body:'test successful!!!'
                 }
             }
         }
